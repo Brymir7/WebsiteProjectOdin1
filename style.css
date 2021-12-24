@@ -11,6 +11,17 @@ header {
     display: flex;
     gap: 50%;
 }
+.mediumheader {
+    display:flex;
+    
+    
+}
+
+.submediumheader{
+    display:flex;
+    flex-direction: column;
+    
+}
 
 .headerlogo {
 
@@ -28,10 +39,19 @@ header {
 
     display: flex;
     gap: 5%;
+    align-items: center;
     
 
 }
 
-.herotext {
+.herotextmain {
     color: #F9FaF8;
+    font-size: 48px;
+    font-weight: bold;
+
+}
+
+.herotextsecond{
+ font-size: 18px;
+ color: #E5E7EB;
 }
