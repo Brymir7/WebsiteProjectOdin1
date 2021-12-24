@@ -1,57 +1,67 @@
 header {
     padding-left: 15%;
     display: flex;
-
     background-color: #1f2937;
     flex-direction: column;
+    gap: 50%;
 }
 
 .upperheader {
     text-decoration: none;
     display: flex;
     gap: 50%;
-}
-.mediumheader {
-    display:flex;
-    
-    
+    margin-top: 2%;
 }
 
-.submediumheader{
-    display:flex;
+.mediumheader {
+    display: flex;
+    margin-top: 8%;
+    margin-right: 15%;
+    gap: 50%;
+    min-width: 40vw;
+}
+
+.image1 {
+    max-width: 100%;
+}
+
+.submediumheader {
+    display: flex;
     flex-direction: column;
-    
 }
 
 .headerlogo {
-
     font-size: 24px;
     color: #F9FaF8;
 }
 
 .headerlinks {
     color: #F9FaF8;
-    
-
 }
 
 .miniflex {
-
     display: flex;
     gap: 5%;
     align-items: center;
-    
-
 }
 
 .herotextmain {
     color: #F9FaF8;
     font-size: 48px;
     font-weight: bold;
-
 }
 
-.herotextsecond{
- font-size: 18px;
- color: #E5E7EB;
+.herotextsecond {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.random-information-flex{
+  margin-top: 2%;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.random-information-flex-headline{
+    justify-content: center;
 }
