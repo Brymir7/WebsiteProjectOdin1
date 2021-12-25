@@ -46,8 +46,8 @@
     padding-top: 10%;
     justify-content: center;
     gap: 20%;
-    
-    
+
+
 
 
 }
@@ -115,6 +115,10 @@
     flex: 1 1 0;
 }
 
+.itemtext {
+    margin-top: 2%;
+}
+
 
 .box {
     width: 170px;
@@ -145,34 +149,74 @@
     align-items: center;
     justify-content: center;
     background: rgb(2, 216, 216);
-    
+
 }
 
-.thirdcontent{
+.thirdcontent {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 3rem;
-    color:ghostwhite;
-    
+    padding-top: 2%;
+    color: ghostwhite;
     padding-left: 20%;
     padding-right: 20%;
-    
-    
 }
-.thirdcontent h3{
+
+.thirdcontent h3 {
     font-size: 48px;
-    margin-bottom: 1%;
-    
+}
+
+.thirdcontent h4 {
+    font-size: 36px;
+    margin-left: 65%;
+}
+
+.fourthflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.fourthcontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+    height: 100px;
+    border-radius: 7px;
+    background-color: darkblue;
+    gap: 15%;
 }
 
 
+.fourthcontenttext h4 {
+    font-size: 24px;
+    color: ghostwhite;
+}
+
+.fourthcontenttext h5 {
+    font-size: 18px;
+    color: ghostwhite;
+}
+
+#signup{
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    background-color: darkblue;
+    border-radius: 7px;
+    color: white;
+}
+
+.signupbox{
+    border: 2px solid white;
+}
 .footer {
     display: flex;
     justify-content: center;
     background: darkcyan;
     font-size: 24px;
     color: ghostwhite;
-
+    padding: 0.25%;
 }
