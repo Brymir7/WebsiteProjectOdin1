@@ -20,24 +20,34 @@
 .header {
     display: flex;
     align-items: center;
-    gap: 50%;
+    gap: 30%;
     box-sizing: border-box;
 }
-
+.header a:link{
+    text-decoration: none;
+    color: #F9FAF8;
+}
+.header a:visited{
+    text-decoration: none;
+    color: #F9FAF8;
+}
 .header-logo {
-    font-size: 32px;
-    color: rgb(240, 240, 245);
+    font-size: 36px;
+    color: #F9FAF8;
     justify-content: center;
     align-items: center;
-
+    flex: 1 0 auto;
+    
 }
 
 .header-nav {
     display: flex;
     list-style: none;
-    gap: 1%;
+    gap: 3%;
     color: ghostwhite;
-    font-size: 24px;
+    font-size: 28px;
+    flex: 1 0 auto;
+    
 
 }
 
@@ -54,11 +64,19 @@
 
 .hero-text {
     flex: 1 1 0;
+    color: hsl(0, 0%, 92%);
+    font-size: 18px;
 }
 
 .hero-text h2 {
     font-size: 48px;
     flex: 1 1 0;
+    font-weight: 600;
+    color: white;
+}
+.hero-signup{
+    border: 0;
+    margin-top: 1%;
 }
 
 .hero-image {
@@ -72,6 +90,8 @@
 .hero-image img {
     object-fit: cover;
     max-width: 400px;
+    border: 2px solid white;
+    border-radius: 7px;
 }
 
 .secondflex {
@@ -116,39 +136,25 @@
 }
 
 .itemtext {
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 
-.box {
+.bear-icon {
     width: 170px;
     height: 170px;
+    border: 6px solid rgb(69, 169, 236);
     border-radius: 7px;
-
+    object-fit: cover;
 }
 
-#box1 {
-    background-color: darkblue;
-}
 
-#box2 {
-    background-color: darkslateblue;
-}
-
-#box3 {
-    background-color: rgb(45, 23, 192);
-}
-
-#box4 {
-    background-color: rgb(54, 30, 209);
-
-}
 
 .thirdflex {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(2, 216, 216);
+    background: darkcyan;
 
 }
 
@@ -186,7 +192,7 @@
     width: 900px;
     height: 100px;
     border-radius: 7px;
-    background-color: darkblue;
+    background-color: #6acde6;
     gap: 15%;
 }
 
@@ -204,7 +210,7 @@
 #signup{
     padding-inline: 1rem;
     padding-block: 0.5rem;
-    background-color: darkblue;
+    background-color: #6acde6;
     border-radius: 7px;
     color: white;
 }
