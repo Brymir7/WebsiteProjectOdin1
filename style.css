@@ -132,6 +132,7 @@
     flex-direction: column;
     max-width: 170px;
     text-align: center;
+    list-style: none;
     flex: 1 1 0;
 }
 
@@ -226,3 +227,4 @@
     color: ghostwhite;
     padding: 0.25%;
 }
+
