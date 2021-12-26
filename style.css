@@ -20,7 +20,7 @@
 .header {
     display: flex;
     align-items: center;
-    gap: 30%;
+    gap: 38%;
     box-sizing: border-box;
 }
 .header a:link{
@@ -111,12 +111,14 @@
 
     box-sizing: border-box;
 }
-
+.secondflex-content{
+    padding-bottom: 21%;
+}
 .contentheadline {
     align-items: center;
     font-size: 36px;
     padding-bottom: 2%;
-
+    
 }
 
 .images {
@@ -227,4 +229,6 @@
     color: ghostwhite;
     padding: 0.25%;
 }
+
+
 
