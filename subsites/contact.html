@@ -24,11 +24,11 @@
                     <li class="selector">||</li>
                     <li><a href="#">Sources</a></li>
                     <li class="selector">||</li>
-                    <li><a href="subsites/contact.html">Contact</a> </li>
+                    <li><a href="contact.html">Contact</a> </li>
                 </div>
-                
+
             </div>
-            <hr style="width:100%", size="2", color=white>
+            <hr style="width:100%" , size="2" , color=white>
         </div>
     </div>
 
@@ -41,26 +41,37 @@
                 <div class="images">
                     <ul class="image-then-text">
                         <li>
-                            <img class="bear-icon" src="../images/gmail.png">
+                            <map name="first">
+                                <area shape="rect" coords="0, 0, 200, 200" href="#">
+                            </map>
+                            <img usemap="#first" class="bear-icon" src="../images/gmail.jpg">
+
                         </li>
                         <li>
-                            <div class="itemtext">G-Mail</div>
-                        </li>
-                    </ul>
-                    <ul class="image-then-text">
-                        <li>
-                            <img class="bear-icon" src="../images/discord.png">
-                        </li>
-                        <li>
-                            <div class="itemtext">Discord</div>
+
+                            <div class="itemtext"><a href="mailto:brymir7@gmail.com">G-Mail</a></div>
                         </li>
                     </ul>
                     <ul class="image-then-text">
                         <li>
-                            <img class="bear-icon" src="../images/phone.png">
+                            <map name="first">
+                                <area shape="rect" coords="0, 0, 200, 200" href="#">
+                            </map>
+                            <img usemap="#first" class="bear-icon" src="../images/discord.png" data-text-to-copy="Bry#5891">
                         </li>
                         <li>
-                            <div class="itemtext">Number</div>
+                            <div class="itemtext"><a href="#" data-text-to-copy="Bry#5891">Discord</a></div>
+                        </li>
+                    </ul>
+                    <ul class="image-then-text">
+                        <li>
+                            <map name="first">
+                                <area shape="rect" coords="0, 0, 200, 200" href="#">
+                            </map>
+                            <img usemap="#first" class="bear-icon" src="../images/phone.png">
+                        </li>
+                        <li>
+                            <div class="itemtext"><a href="#" data-text-to-copy="01738345939">Number</a></div>
                         </li>
                     </ul>
                 </div>
@@ -72,6 +83,23 @@
     <div class="footer">
         Made by Brymir
     </div>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const links = document.querySelectorAll('a[data-text-to-copy]')
+
+
+            for (const link of links) {
+
+                link.addEventListener('click', (event) => {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    const textToCopy = link.getAttribute('data-text-to-copy')
+                    console.log('clicked', link, textToCopy)
+                    navigator.clipboard.writeText(textToCopy)
+                })
+            }
+        })
+    </script>
 </body>
 
 </html>

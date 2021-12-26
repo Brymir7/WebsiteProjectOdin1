@@ -112,8 +112,25 @@
     box-sizing: border-box;
 }
 .secondflex-content{
-    padding-bottom: 21%;
+   
+    padding-top : 10%;
+    margin-bottom: 9.5%;
+    
 }
+.secondflex-content h3{
+    font-size: 65px;
+}
+.secondflex-content a:link{
+    text-decoration: none;
+    color: darkblue;
+    margin-left: 10%;
+    font-size: 32px;
+}
+.secondflex-content a:visited{
+    text-decoration: none;
+    color: darkblue;
+}
+
 .contentheadline {
     align-items: center;
     font-size: 36px;
