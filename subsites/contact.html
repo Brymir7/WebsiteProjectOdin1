@@ -4,7 +4,6 @@
 
 <head>
     <meta charset="utf-8">
-
     <title>Contact</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
         integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
@@ -41,23 +40,25 @@
                 <div class="images">
                     <ul class="image-then-text">
                         <li>
-                            <map name="first">
-                                <area shape="rect" coords="0, 0, 200, 200" href="mailto:brymir7@gmail.com">
-                            </map>
-                            <img usemap="#first" class="bear-icon" src="../images/gmail.jpg">
-
+                            <span data-text="Click to copy" class="tooltipmiddle">
+                                <map name="first">
+                                    <area shape="rect" coords="0, 0, 200, 200" href="mailto:brymir7@gmail.com">
+                                </map>
+                                <img usemap="#first" class="bear-icon" src="../images/gmail.jpg">
+                            </span>
                         </li>
                         <li>
-
                             <div class="itemtext"><a href="mailto:brymir7@gmail.com">G-Mail</a></div>
                         </li>
                     </ul>
                     <ul class="image-then-text">
                         <li>
-                            <map name="second">
-                                <area shape="rect" coords="0, 0, 200, 200" href="#" data-text-to-copy="Bry#5891">
-                            </map>
-                            <img usemap="#second" class="bear-icon" src="../images/discord.png">
+                            <span data-text="Don't touch this" class="tooltipmiddle">
+                                <map name="second">
+                                    <area shape="rect" coords="0, 0, 200, 200" href="#" data-text-to-copy="Bry#5891">
+                                </map>
+                                <img usemap="#second" class="bear-icon" src="../images/discord.png">
+                            </span>
                         </li>
                         <li>
                             <div class="itemtext"><a href="#" data-text-to-copy="Bry#5891">Discord</a></div>
@@ -65,10 +66,12 @@
                     </ul>
                     <ul class="image-then-text">
                         <li>
+                            <span data-text="Click to copy" class="tooltipmiddle">
                             <map name="third">
-                                <area shape="rect" coords="0, 0, 200, 200" href="#" data-text-to-copy="01738345939">>  
+                                <area shape="rect" coords="0, 0, 200, 200" href="#" data-text-to-copy="01738345939">
                             </map>
                             <img usemap="#third" class="bear-icon" src="../images/phone.png">
+                            </span>
                         </li>
                         <li>
                             <div class="itemtext"><a href="#" data-text-to-copy="01738345939">Number</a></div>
@@ -81,23 +84,25 @@
     </div>
 
     <div class="footer">
-        Made by Brymir
+        Made by Brymir</div>
     </div>
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
             const links = document.querySelectorAll('a[data-text-to-copy]')
             const links2 = document.querySelectorAll('area[data-text-to-copy]')
-                        for (const link of links) {
-                        for (const link of links2) {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault()
-                    event.stopPropagation()
-                    const textToCopy = link.getAttribute('data-text-to-copy')
-                    console.log('clicked', link, textToCopy)
-                    navigator.clipboard.writeText(textToCopy)
-                })
-            }}
+            for (const link of links) {
+                for (const link of links2) {
+                    link.addEventListener('click', (event) => {
+                        event.preventDefault()
+                        event.stopPropagation()
+                        const textToCopy = link.getAttribute('data-text-to-copy')
+                        console.log('clicked', link, textToCopy)
+                        navigator.clipboard.writeText(textToCopy)
+                    })
+                }
+            }
         })
+
     </script>
 </body>
 

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 .firstflex {
     display: flex;
     justify-content: center;
@@ -23,21 +24,24 @@
     gap: 38%;
     box-sizing: border-box;
 }
-.header a:link{
+
+.header a:link {
     text-decoration: none;
     color: #F9FAF8;
 }
-.header a:visited{
+
+.header a:visited {
     text-decoration: none;
     color: #F9FAF8;
 }
+
 .header-logo {
     font-size: 36px;
     color: #F9FAF8;
     justify-content: center;
     align-items: center;
     flex: 1 0 auto;
-    
+
 }
 
 .header-nav {
@@ -47,7 +51,7 @@
     color: ghostwhite;
     font-size: 28px;
     flex: 1 0 auto;
-    
+
 
 }
 
@@ -74,7 +78,8 @@
     font-weight: 600;
     color: white;
 }
-.hero-signup{
+
+.hero-signup {
     border: 0;
     margin-top: 1%;
 }
@@ -111,31 +116,33 @@
 
     box-sizing: border-box;
 }
-.secondflex-content{
-   
-    padding-top : 10%;
+
+.secondflex-content {
+
+    padding-top: 4.3%;
     margin-bottom: 9.5%;
-    
+
 }
-.secondflex-content h3{
-    font-size: 65px;
-}
-.secondflex-content a:link{
+
+.secondflex-content a:link {
     text-decoration: none;
     color: darkblue;
     margin-left: 10%;
     font-size: 32px;
 }
-.secondflex-content a:visited{
+
+.secondflex-content a:visited {
     text-decoration: none;
     color: darkblue;
 }
 
-.contentheadline {
+.contentheadline h3{
     align-items: center;
-    font-size: 36px;
-    padding-bottom: 2%;
-    
+    font-family: 'Source Code Pro', monospace;
+    padding-bottom: 5%;
+    color:rgb(69, 169, 236);
+    font-size: 150px;
+
 }
 
 .images {
@@ -227,7 +234,7 @@
     color: ghostwhite;
 }
 
-#signup{
+#signup {
     padding-inline: 1rem;
     padding-block: 0.5rem;
     background-color: #6acde6;
@@ -235,9 +242,10 @@
     color: white;
 }
 
-.signupbox{
+.signupbox {
     border: 2px solid white;
 }
+
 .footer {
     display: flex;
     justify-content: center;
@@ -249,3 +257,29 @@
 
 
 
+
+.tooltipmiddle {
+    position: relative;
+}
+
+.tooltipmiddle:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    transform: translateX(3%);
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    background: darkcyan;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s opacity;
+
+}
+
+.tooltipmiddle:hover:before {
+    display: block;
+    opacity: 1;
+}
