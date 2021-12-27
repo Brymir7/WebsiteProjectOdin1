@@ -153,7 +153,8 @@
     gap: 10%;
     align-items: center;
     justify-content: center;
-
+    margin-right: 12px;
+   
 }
 
 .image-then-text {
@@ -180,7 +181,7 @@
     object-fit: cover;
     transition: 0.3s;
 }
-.bear-icon:hover{
+.images a:hover img{
     transform: scale(1.05);
     box-shadow: 0 0 30px rgb(25, 11, 107)
 }
@@ -249,6 +250,13 @@
     background-color: #6acde6;
     border-radius: 7px;
     color: white;
+    transition: 0.3s;
+}
+#signup:hover {
+    background-color:rgb(25, 11, 107);
+}
+#signup:focus{
+    background-color: #6acde6;
 }
 
 .signupbox {
