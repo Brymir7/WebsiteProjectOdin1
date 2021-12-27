@@ -24,6 +24,8 @@
     align-items: center;
     gap: 38%;
     box-sizing: border-box;
+    border-bottom: 2px solid white;
+    padding-bottom: 0.25%;
 }
 
 .header a:link {
@@ -116,7 +118,7 @@
 
 .secondflex-content {
 
-    padding-top: 4.3%;
+    padding-top: 4.55%;
     margin-bottom: 9.5%;
 
 }
@@ -154,7 +156,7 @@
     align-items: center;
     justify-content: center;
     margin-right: 12px;
-   
+
 }
 
 .image-then-text {
@@ -181,7 +183,8 @@
     object-fit: cover;
     transition: 0.3s;
 }
-.images a:hover img{
+
+.images a:hover img {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgb(25, 11, 107)
 }
@@ -252,10 +255,12 @@
     color: white;
     transition: 0.3s;
 }
+
 #signup:hover {
-    background-color:rgb(25, 11, 107);
+    background-color: rgb(25, 11, 107);
 }
-#signup:focus{
+
+#signup:focus {
     background-color: #6acde6;
 }
 
@@ -299,4 +304,66 @@
 .tooltipmiddle:hover:before {
     display: block;
     opacity: 1;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s ease-in-out;
+    border: 3px solid white;
+    border-radius: 10px;
+    z-index: 5;
+    background-color: darkcyan;
+    width: 500px;
+    max-width: 80%;
+}
+.modal.active{
+    transform: translate(-50%, -50%) scale(1)
+}
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+    font-size: 1.25 rem;
+    font-weight: bold;
+    color: black;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+    color: black;
+
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
 }

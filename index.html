@@ -31,13 +31,27 @@
                     <li><a href="subsites/contact.html">Contact</a> </li>
                 </div>
             </div>
-            <hr style="width:100%" , size="2" , color=white>
+
             <div class="hero">
                 <div class="hero-text">
                     <h2>Die Arktische Bären GmbH</h2>
                     <p>Willkommen zu der Website der Arktischen Bären GmbH. Hier können Sie sich über arktische Bären
                         informieren</p>
-                    <button id="signup" class="hero-signup">Sign up!</button>
+                    <button id="signup" class="hero-signup" data-modal-target="#modal">Sign up!</button>
+                    <div class="modal" id="modal">
+                        <div class="modal-header">
+                            <div class="title">Newsletter</div>
+                            <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea nemo, earum
+                            libero non beatae laborum laboriosam corporis minus similique nesciunt sint eveniet aut
+                            culpa omnis vero necessitatibus blanditiis nostrum rerum explicabo eos id deserunt quae rem!
+                            Incidunt ut quisquam officiis a dolorem corporis dicta, rem aut modi obcaecati tempora
+                            tenetur, odit facere est veritatis quaerat! Magni amet suscipit quis facere? Consequuntur
+                            mollitia, perspiciatis pariatur minus nemo, alias illum iste magni, rem deserunt eos
+                            voluptas! Minus earum consequatur aperiam optio a.</div>
+                    </div>
+                    <div id="overlay"></div>
                 </div>
                 <div class="hero-image"><img src="images/artic1.jpg"></div>
             </div>
@@ -108,7 +122,7 @@
             </div>
             <div class="fourthcontentsignupbutton">
 
-                <button id="signup" class="signupbox">Sign up!</button>
+                <button id="signup" class="signupbox" data-modal-target="#modal">Sign up!</button>
 
             </div>
         </div>
@@ -117,7 +131,37 @@
     <div class="footer">
         Made by Brymir
     </div>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const openModalButtons = document.querySelectorAll('[data-modal-target]')
+            const closeModalButtons = document.querySelectorAll('[data-close-button')
+            const overlay = document.getElementById('overlay')
 
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modal = document.querySelector(button.dataset.modalTarget)
+                    openModal(modal)
+                })
+            })
+            closeModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modal = button.closest('.modal')
+                    closeModal(modal)
+                })
+            })
+            function openModal(modal) {
+                if (modal == null) return
+                modal.classList.add('active')
+                overlay.classList.add('active')
+                
+            }
+            function closeModal(modal) {
+                if (modal == null) return
+                modal.classList.remove('active')
+                overlay.classList.remove('active')
+            }
+        })
+    </script>
 </body>
 
 </html>
