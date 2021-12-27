@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
         integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
@@ -53,7 +54,7 @@
                     </ul>
                     <ul class="image-then-text">
                         <li>
-                            <span data-text="Don't touch this" class="tooltipmiddle">
+                            <span data-text="Can't touch this" class="tooltipmiddle">
                                 <map name="second">
                                     <area shape="rect" coords="0, 0, 200, 200" href="#" data-text-to-copy="Bry#5891">
                                 </map>
@@ -88,10 +89,10 @@
     </div>
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
-            const links = document.querySelectorAll('a[data-text-to-copy]')
-            const links2 = document.querySelectorAll('area[data-text-to-copy]')
+            const links = document.querySelectorAll('[data-text-to-copy]')
+            
             for (const link of links) {
-                for (const link of links2) {
+               
                     link.addEventListener('click', (event) => {
                         event.preventDefault()
                         event.stopPropagation()
@@ -100,9 +101,8 @@
                         navigator.clipboard.writeText(textToCopy)
                     })
                 }
-            }
-        })
-
+            })
+        
     </script>
 </body>
 
