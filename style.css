@@ -258,6 +258,7 @@
 
 #signup:hover {
     background-color: rgb(25, 11, 107);
+    cursor: pointer;
 }
 
 #signup:focus {
