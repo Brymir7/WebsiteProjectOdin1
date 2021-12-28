@@ -163,6 +163,12 @@
                     closeModal(modal)
                 })
             })
+            overlay.addEventListener('click', () => {
+                    const modal = document.getElementById('modal')
+                    removeValue()
+                    closeModal(modal)
+                })
+            
             submitButtons.forEach(button => {
                 button.addEventListener('click', () =>
                     removeValue())

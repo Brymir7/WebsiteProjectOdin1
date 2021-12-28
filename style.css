@@ -340,14 +340,15 @@
     justify-content: center;
     opacity: 0;
     position: absolute;
-    width: 14vh;
-    height: 13vh;
+    width: 28%;
+    height: 30%;
     margin-left: 2%;
-    margin-top: 5%;
+    margin-top: 2%;
     padding: 1%;
     transition: 0.3s opacity;
     border-radius: 6px;
-    background-color: rgb(25, 11, 107);
+    border: 1px solid white;
+    background-color: #6acde6;
     
 }
 .modal-tooltip:hover:before {
@@ -386,7 +387,7 @@ input {
     padding-left: 12px;
     padding-top: 12px;
     box-sizing: border-box;
-    font-size: 32px;
+    font-size: 20px;
     border: none;
     background: none;
     outline: none;
