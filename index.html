@@ -43,16 +43,16 @@
 
                     <div class="modal" id="modal">
                         <div class="modal-header">
-                            <span data-text="This is the newsletter... woof" class="modal-tooltip">
+                            <span data-text="This is the sign up for the newsletter... Woof?" class="modal-tooltip">
                                 <img src="images/polar5.jpg">
                             </span>
                             <button data-close-button class="close-button">&times;</button>
                         </div>
                         <div class="modal-body">
 
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="E-Mail">
-                            <a class="submit-button">Submit</a>
+                            <input type="text" id="Name" value='' placeholder="Name">
+                            <input type="text" id="E-Mail" value='' placeholder="E-Mail">
+                            <a data-submit-button class="submit-button">Submit</a>
 
                         </div>
 
@@ -147,6 +147,7 @@
         window.addEventListener('DOMContentLoaded', (event) => {
             const openModalButtons = document.querySelectorAll('[data-modal-target]')
             const closeModalButtons = document.querySelectorAll('[data-close-button')
+            const submitButtons = document.querySelectorAll('[data-submit-button]')
             const overlay = document.getElementById('overlay')
 
             openModalButtons.forEach(button => {
@@ -158,8 +159,13 @@
             closeModalButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     const modal = button.closest('.modal')
+                    removeValue()
                     closeModal(modal)
                 })
+            })
+            submitButtons.forEach(button => {
+                button.addEventListener('click', () =>
+                    removeValue())
             })
             function openModal(modal) {
                 if (modal == null) return
@@ -171,7 +177,15 @@
                 if (modal == null) return
                 modal.classList.remove('active')
                 overlay.classList.remove('active')
+                input.value = ''
             }
+            function removeValue() {
+                const value1 = document.getElementById('Name');
+                const value2 = document.getElementById('E-Mail');
+                value1.value = '';
+                value2.value = '';
+            }
+
         })
     </script>
 </body>

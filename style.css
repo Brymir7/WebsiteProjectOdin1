@@ -322,22 +322,47 @@
     max-width: 80%;
     max-height: 100%;
 }
-.modal.active{
+
+.modal.active {
     transform: translate(-50%, -50%) scale(1)
 }
+
 .modal-header {
     position: relative;
     width: 500px;
     height: 200px;
 }
 
-.modal-header img{
+.modal-tooltip:before {
+    content: attr(data-text);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    width: 14vh;
+    height: 13vh;
+    margin-left: 2%;
+    margin-top: 5%;
+    padding: 1%;
+    transition: 0.3s opacity;
+    border-radius: 6px;
+    background-color: rgb(25, 11, 107);
+    
+}
+.modal-tooltip:hover:before {
+    opacity: 1;
+    
+}
+
+
+.modal-header img {
     width: 170px;
     height: 170px;
     border: 6px solid rgb(69, 169, 236);
-    border-radius: 50%; 
+    border-radius: 50%;
     position: absolute;
-    top: 5px;
+    top: 5%;
     left: 33%;
 }
 
@@ -346,26 +371,27 @@
     border: none;
     outline: none;
     background: none;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
     color: white;
     position: absolute;
     right: 5px;
-    bottom: 55%;
+    bottom: 65%;
 }
 
 input {
     width: 50%;
-    display:block;
+    display: block;
     margin: 5px auto;
     padding-left: 12px;
     padding-top: 12px;
     box-sizing: border-box;
+    font-size: 32px;
     border: none;
     background: none;
     outline: none;
     border-bottom: 2px solid white;
-   
+
 }
 
 .submit-button {
@@ -378,11 +404,16 @@ input {
     margin-left: 42.5%;
     margin-top: 5%;
     position: absolute;
-    
-    
+
+
 }
+
 .submit-button:hover {
-    background-color:rgb(25, 11, 107);
+    background-color: rgb(25, 11, 107);
+    cursor: pointer;
+}
+.submit-button:focus {
+    background-color: #6acde6;
 }
 
 #overlay {
@@ -397,6 +428,7 @@ input {
     pointer-events: none;
 
 }
+
 #overlay.active {
     opacity: 1;
     pointer-events: all;
