@@ -99,15 +99,20 @@
 }
 
 .hero-image-large{
-    position: absolute;
-    border: 6px solid white;
-    display:none;
-    object-fit: cover;
+    display: none;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
-    z-index: 20;
-    height: 200px;
-    width: 120px;
+    position: absolute;
+    width: 18%;
+    height: 10%;
+    margin-left: 2%;
+    margin-top: 10%;
+    padding: 1%;
     transition: 0.3s opacity;
+    border-radius: 6px;
+    border: 5px solid rgb(27, 165, 184);
+    background-color: #6acde6;
    
 }
 .hero-image-large.active{

@@ -66,12 +66,12 @@
                     <div id="overlay"></div>
                 </div>
                 <div class="hero-image"><a id="image" href="#"><img src="images/artic1.jpg"></div></a>
-
+                <div class="hero-image-large" id="data-big"><img src="images/artic1.jpg"> </div>
             </div>
         </div>
         
     </div>
-    <div class="hero-image-large" id="data-big"><img src="images/artic1.jpg"> </div>
+    
 
     <div class="secondFlex">
         <div class="secondcontent">
@@ -176,9 +176,10 @@
             })
             overlay.addEventListener('click', () => {
                 const modal = document.getElementById('modal')
+                closeImage()
                 removeValue()
                 closeModal(modal)
-                closeImage()
+                
             })
             function openModal(modal) {
                 if (modal == null) return
