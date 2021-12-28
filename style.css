@@ -98,6 +98,22 @@
     border-radius: 7px;
 }
 
+.hero-image-large{
+    position: absolute;
+    border: 6px solid white;
+    display:none;
+    object-fit: cover;
+    opacity: 0;
+    z-index: 20;
+    height: 200px;
+    width: 120px;
+    transition: 0.3s opacity;
+   
+}
+.hero-image-large.active{
+    opacity: 1;
+    display: flex;
+}
 .secondflex {
     box-sizing: border-box;
     display: flex;
@@ -335,7 +351,7 @@
 
 .modal-tooltip:before {
     content: attr(data-text);
-    display:flex;
+    display: none;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -353,7 +369,7 @@
 }
 .modal-tooltip:hover:before {
     opacity: 1;
-    
+    display:flex
 }
 
 

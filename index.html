@@ -57,7 +57,7 @@
                         </div>
 
                     </div>
-
+                    
 
 
 
@@ -65,11 +65,13 @@
 
                     <div id="overlay"></div>
                 </div>
-                <div class="hero-image"><img src="images/artic1.jpg"></div>
+                <div class="hero-image"><a id="image" href="#"><img src="images/artic1.jpg"></div></a>
+
             </div>
         </div>
+        
     </div>
-
+    <div class="hero-image-large" id="data-big"><img src="images/artic1.jpg"> </div>
 
     <div class="secondFlex">
         <div class="secondcontent">
@@ -119,7 +121,8 @@
     </div>
     <div class="thirdflex">
         <div class="thirdcontent">
-            <h3>Nein, das kann nicht sein. Ich schlafe jeden Tag weinend zum Mondschein ein. Den Wein trinkend, traurig
+            <h3>Nein, das kann nicht sein. Ich schlafe jeden Tag weinend zum Mondschein ein. Den WeinEmi Evans & White
+                Note Remix trinkend, traurig
                 und allein.
                 Das Schluchzen muss leise sein."</h3>
             <h4>-Maxim</h4>
@@ -149,7 +152,8 @@
             const closeModalButtons = document.querySelectorAll('[data-close-button')
             const submitButtons = document.querySelectorAll('[data-submit-button]')
             const overlay = document.getElementById('overlay')
-
+            const image = document.getElementById('image')
+            const image2 = document.getElementById('data-big')
             openModalButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     const modal = document.querySelector(button.dataset.modalTarget)
@@ -163,15 +167,18 @@
                     closeModal(modal)
                 })
             })
-            overlay.addEventListener('click', () => {
-                    const modal = document.getElementById('modal')
-                    removeValue()
-                    closeModal(modal)
-                })
-            
             submitButtons.forEach(button => {
                 button.addEventListener('click', () =>
                     removeValue())
+            })
+            image.addEventListener('click', (event) => {
+                openImage()
+            })
+            overlay.addEventListener('click', () => {
+                const modal = document.getElementById('modal')
+                removeValue()
+                closeModal(modal)
+                closeImage()
             })
             function openModal(modal) {
                 if (modal == null) return
@@ -186,12 +193,18 @@
                 input.value = ''
             }
             function removeValue() {
-                const value1 = document.getElementById('Name');
-                const value2 = document.getElementById('E-Mail');
-                value1.value = '';
-                value2.value = '';
+                const value1 = document.getElementById('Name')
+                const value2 = document.getElementById('E-Mail')
+                value1.value = ''
+                value2.value = ''
             }
-
+            function openImage() {
+                image2.classList.add('active')
+                overlay.classList.add('active')
+            }
+            function closeImage() {
+                image2.classList.remove('active')
+            }
         })
     </script>
 </body>
